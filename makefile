@@ -1,10 +1,10 @@
 default:
-	@meson compile -C builddir
-	@echo "--------------"
-	./builddir/cxx_test
+	@meson compile -C build
+	@echo "-------------- PROGRAM START --------------"
+	@./build/cxx_test
 
 reset:
-	@meson setup --wipe builddir
+	@CXX="clang++ -stdlib=libc++" CC="clang" meson setup --wipe build
 
 setup:
-	@meson setup builddir
+	@meson setup build
