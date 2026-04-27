@@ -5,6 +5,3 @@ default:
 
 reset:
 	@CXX="clang++ -stdlib=libc++" CC="clang" meson setup --wipe build
-
-setup:
-	@meson setup build
