@@ -29,6 +29,11 @@ namespace Game {
         }
     }
 
+    void GameLogic::exit() {
+        this->shouldRun = false;
+        std::println("\nThanks for playing!");
+    }
+
     GameLogic *GameLogic::getInstance() {
         if (GameLogic::instance == nullptr) {
             instance = new GameLogic();
@@ -68,8 +73,4 @@ namespace Game {
         return this->data.compare(toCompare) == 0;
     }
 
-    void GameLogic::exit() {
-        this->shouldRun = false;
-        std::println("\nThanks for playing!");
-    }
 } // namespace Game
