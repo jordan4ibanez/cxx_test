@@ -15,9 +15,7 @@ int main(int argc, char **argv) {
     }
     std::println("----- Done printing arguments -----");
 
-    std::unique_ptr<Game::GameLogic> game = std::make_unique<Game::GameLogic>();
-
-    game->run();
+    Game::GameLogic::getInstance()->run();
 
 
 
