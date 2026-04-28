@@ -9,6 +9,8 @@ namespace Game {
       public:
         void run();
 
+        GameLogic *getInstance();
+
         // Disable copy constructor.
         GameLogic(const GameLogic &obj) = delete;
 

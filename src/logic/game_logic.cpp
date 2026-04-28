@@ -18,9 +18,6 @@ namespace Game {
             std::exit(signal);
         }
     }
-    GameLogic::GameLogic() {
-        std::println("Game started.");
-    }
 
     void GameLogic::run() {
         setUpCatch();
@@ -30,6 +27,11 @@ namespace Game {
             intakeData();
             commandProcess();
         }
+    }
+
+
+    GameLogic::GameLogic() {
+        std::println("Game started.");
     }
 
     void GameLogic::setUpCatch() {
