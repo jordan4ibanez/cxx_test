@@ -33,7 +33,7 @@ namespace Game {
         if (GameLogic::instance == nullptr) {
             instance = new GameLogic();
         }
-        return nullptr;
+        return instance;
     }
 
     GameLogic::GameLogic() {
