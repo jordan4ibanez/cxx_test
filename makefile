@@ -3,5 +3,5 @@ default:
 	@echo "-------------- PROGRAM START --------------"
 	@./build/cxx_test
 
-reset:
+clean:
 	@CXX="clang++ -stdlib=libc++" CC="clang" meson setup --wipe build

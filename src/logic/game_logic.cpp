@@ -1,20 +1,39 @@
 #include "game_logic.hpp"
-
 #include <boost/algorithm/string.hpp>
+#include <csignal>
+#include <cstdint>
 #include <iostream>
 #include <print>
 
+
 namespace Game {
+
+    GameLogic *GameLogic::instance = nullptr;
+
+    void signalHandling(int32_t signal) {
+        std::println("\nSIGNAL: {}", signal);
+        if (signal == SIGINT) {
+
+        } else {
+            std::exit(signal);
+        }
+    }
     GameLogic::GameLogic() {
         std::println("Game started.");
     }
 
     void GameLogic::run() {
+        setUpCatch();
+
         while (this->shouldRun) {
             printPrompt();
             intakeData();
             commandProcess();
         }
+    }
+
+    void GameLogic::setUpCatch() {
+        std::signal(SIGINT, signalHandling);
     }
 
     void GameLogic::printPrompt() {

@@ -7,7 +7,7 @@ You need clang++, boost, make, meson, ninja, and mold. Disgusting, I know.
 Then you run:
 
 ```bash
-make reset
+make clean
 
 make
 ```

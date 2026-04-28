@@ -2,7 +2,7 @@
 
 #include <cstdint>
 
-class uuid {
+class uuid final {
   private:
     static uint64_t current;
 

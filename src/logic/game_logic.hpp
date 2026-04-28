@@ -2,16 +2,25 @@
 
 #include <string>
 
-namespace Game {
-    class GameLogic {
-      public:
-        GameLogic();
+// Singleton.
 
+namespace Game {
+    class GameLogic final {
+      public:
         void run();
 
+        // Disable copy constructor.
+        GameLogic(const GameLogic &obj) = delete;
+
       private:
+        GameLogic();
+
+        static GameLogic *instance;
+
         bool shouldRun = true;
         std::string data;
+
+        void setUpCatch();
 
         void printPrompt();
 
