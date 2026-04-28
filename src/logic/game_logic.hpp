@@ -9,6 +9,8 @@ namespace Game {
       public:
         void run();
 
+        void exit();
+
         static GameLogic *getInstance();
 
         // Disable copy constructor.
@@ -31,7 +33,5 @@ namespace Game {
         void commandProcess();
 
         bool isCommand(std::string toCompare);
-
-        void exit();
     };
 } // namespace Game
