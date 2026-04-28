@@ -17,8 +17,6 @@ int main(int argc, char **argv) {
 
     Game::GameLogic::getInstance()->run();
 
-
-
     // std::unique_ptr<Game::Entity> ent = std::make_unique<Game::Entity>();
     // std::println("{}", ent->getHP());
 
