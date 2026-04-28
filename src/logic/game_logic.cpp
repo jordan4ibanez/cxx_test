@@ -11,10 +11,9 @@ namespace Game {
     void signalHandling(int32_t signal) {
         std::println("\nSIGNAL: {}", signal);
         if (signal == SIGINT) {
-
-        } else {
-            std::exit(signal);
+            GameLogic::getInstance()->exit();
         }
+        std::exit(signal);
     }
 
     GameLogic *GameLogic::instance = nullptr;
