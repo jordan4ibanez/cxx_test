@@ -29,6 +29,12 @@ namespace Game {
         }
     }
 
+    GameLogic *GameLogic::getInstance() {
+        if (GameLogic::instance == nullptr) {
+            instance = new GameLogic();
+        }
+        return nullptr;
+    }
 
     GameLogic::GameLogic() {
         std::println("Game started.");
