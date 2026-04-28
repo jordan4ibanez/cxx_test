@@ -8,8 +8,6 @@
 
 namespace Game {
 
-    GameLogic *GameLogic::instance = nullptr;
-
     void signalHandling(int32_t signal) {
         std::println("\nSIGNAL: {}", signal);
         if (signal == SIGINT) {
@@ -18,6 +16,8 @@ namespace Game {
             std::exit(signal);
         }
     }
+
+    GameLogic *GameLogic::instance = nullptr;
 
     void GameLogic::run() {
         setUpCatch();
