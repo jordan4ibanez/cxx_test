@@ -1,6 +1,8 @@
 #pragma once
 
+#include <cstdint>
 #include <print>
+#include <string>
 
 namespace Game {
 
@@ -8,14 +10,20 @@ namespace Game {
       public:
         Entity();
 
-        Entity(int hp);
-
         ~Entity();
 
         int getHP();
 
+        Entity *setHP(int32_t hp);
+
+        std::string getName();
+
+        Entity *setName(std::string name);
+
       private:
-        int hp = 20;
+        int32_t hp = 20;
+        uint64_t uuid = 0;
+        std::string name = "";
     };
 
 } // namespace Game

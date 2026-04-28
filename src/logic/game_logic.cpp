@@ -1,5 +1,6 @@
 #include "game_logic.hpp"
 
+#include <boost/algorithm/string.hpp>
 #include <iostream>
 #include <print>
 
@@ -12,10 +13,7 @@ namespace Game {
         while (this->shouldRun) {
             printPrompt();
             intakeData();
-
-            if (this->data.length() == 0) {
-                exit();
-            }
+            commandProcess();
         }
     }
 
@@ -26,6 +24,21 @@ namespace Game {
     void GameLogic::intakeData() {
         this->data.clear();
         std::cin >> this->data;
+        boost::trim(this->data);
+        boost::to_lower(this->data);
+    }
+
+    void GameLogic::commandProcess() {
+        if (this->data.length() == 0 || isCommand("exit") ||
+            isCommand("quit")) {
+            exit();
+        } else if (isCommand("create")) {
+            std::println("create a creation function somehow");
+        }
+    }
+
+    bool GameLogic::isCommand(std::string toCompare) {
+        return this->data.compare(toCompare) == 0;
     }
 
     void GameLogic::exit() {

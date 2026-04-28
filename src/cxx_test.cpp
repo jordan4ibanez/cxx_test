@@ -21,16 +21,16 @@ int main(int argc, char **argv) {
 
 
 
-    std::unique_ptr<Game::Entity> ent = std::make_unique<Game::Entity>();
-    std::println("{}", ent->getHP());
+    // std::unique_ptr<Game::Entity> ent = std::make_unique<Game::Entity>();
+    // std::println("{}", ent->getHP());
 
-    std::unordered_map<std::string, Game::Entity> database;
+    // std::unordered_map<std::string, Game::Entity> database;
 
-    std::string command;
+    // std::string command;
 
-    std::cout << "Input command: ";
-    std::cin >> command;
-    std::cout << command << std::endl;
+    // std::cout << "Input command: ";
+    // std::cin >> command;
+    // std::cout << command << std::endl;
 
     std::println("----- END OF MAIN -----");
     return 0;

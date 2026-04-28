@@ -2,7 +2,7 @@
  
 This is my first c++ project that actually runs.
 
-You need clang++, make, meson, ninja, and mold. Disgusting, I know.
+You need clang++, boost, make, meson, ninja, and mold. Disgusting, I know.
 
 Then you run:
 

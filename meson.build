@@ -20,6 +20,7 @@ sources = [
   'src/cxx_test.cpp',
   'src/entity/entity.cpp',
   'src/logic/game_logic.cpp',
+  'src/uuid/uuid.cpp',
 ]
 
 exe = executable(

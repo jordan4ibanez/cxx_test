@@ -9,14 +9,18 @@ namespace Game {
 
         void run();
 
+      private:
+        bool shouldRun = true;
+        std::string data;
+
         void printPrompt();
 
         void intakeData();
 
-        void exit();
+        void commandProcess();
 
-      private:
-        bool shouldRun = true;
-        std::string data;
+        bool isCommand(std::string toCompare);
+
+        void exit();
     };
 } // namespace Game
